@@ -1,0 +1,14 @@
+<h1><code>Inventory</code></h1>
+<table>
+  <tr *ngFor="let i of inventoryList; let idx = index">
+    <td>
+      <img [src]="i.imageUrl" [alt]="i.name" width="32px">
+    </td>
+    <td>{{ i.name }}</td>
+    <td>
+      <button type="button" (click)="selected(idx)">
+        Add
+      </button>
+    </td>
+  </tr>
+</table>
